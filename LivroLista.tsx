@@ -31,9 +31,9 @@ export default function LivroLista() {
             <Card.Title title={item.autorPrincipal}   />
             <Card.Content>
               <Text variant="titleLarge">{item.titulo}</Text>
-              <Text variant="bodyMedium">{}</Text>
+              <Text variant="bodyMedium">{item.autorPrincipal}</Text>
             </Card.Content>
-            <Card.Cover  source={{ uri: `https://bibliotecaetecmaua.azurewebsites.net/Content/Images/${item.imagem}` }} />
+            <Card.Cover style={estilocard.imagem}  resizeMode='contain' source={{ uri: `https://bibliotecaetecmaua.azurewebsites.net/Content/Images/${item.imagem}` }} />
 
           </Card>
          } // Supondo que cada livro tenha uma propriedade 'titulo'
@@ -46,5 +46,12 @@ export default function LivroLista() {
 const estilocard = StyleSheet.create({
     container: {
       margin: 10,
+      height: 'auto',
     },
+    imagem:{
+      justifyContent: 'center',
+      maxWidth: '100%',
+      width:200,
+      height:200,
+    }
   });

@@ -4,7 +4,7 @@ import LivroLista from './LivroLista';
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       
 
       <StatusBar style="auto" />
@@ -12,7 +12,7 @@ export default function App() {
       <LivroLista></LivroLista>
      
       
-    </SafeAreaView>
+    </View>
   );
 }
 
